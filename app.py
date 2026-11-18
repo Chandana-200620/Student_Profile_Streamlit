@@ -1,0 +1,17 @@
+
+import streamlit as st
+from groq import Groq
+st.set_page_config(page_title='STUDENT PROFILE', page_icon='😍', layout='centered')
+st.title('Student Profile Application')
+st.caption('Developed by Chandana HL')
+try:
+  client=Groq(api_key=st.secrets['GROQ_API_KEY'])
+except(KeyError,FileNotFoundError):
+  st.error("API key is missing. Add it on advanced settings")
+  st.stop
+name=st.text_area('Enter your name')
+usn=st.text_area('Enter your USN')
+dept=st.selectbox('Department', ['CSE', 'ISE', 'ECE', 'EEE','CIVIL','MECHANICAL'])
+mode=st.radio('Current Year',['1st year','2nd year','3rd year','4th year'])
+st.button('View my profile')
+  
