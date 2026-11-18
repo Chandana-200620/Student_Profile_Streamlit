@@ -11,7 +11,7 @@ except(KeyError,FileNotFoundError):
   st.error("API key is missing. Add it on advanced settings")
   st.stop
 name=st.text_input('Student Name','Enter your name')
-usn=st.text_area('Enter your USN')
+usn=st.text_input('USN/ ROLL NUMBER','Enter your USN')
 dept=st.selectbox('Department', ['CSE', 'ISE', 'ECE', 'EEE','CIVIL','MECHANICAL'])
 mode=st.radio('Current Year',['1st year','2nd year','3rd year','4th year'])
 st.button('View my profile')
