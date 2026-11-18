@@ -2,8 +2,9 @@
 import streamlit as st
 from groq import Groq
 st.set_page_config(page_title='STUDENT PROFILE', page_icon='😍', layout='centered')
-st.title('Student Profile Application')
+st.title('🎓Student Profile Application')
 st.caption('Developed by Chandana HL')
+st.caption('ℹ️Fill in your detailes and click View my profile')
 try:
   client=Groq(api_key=st.secrets['GROQ_API_KEY'])
 except(KeyError,FileNotFoundError):
